@@ -1,0 +1,56 @@
+{
+  "name": "udunkulu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test mocha --reporter spec",
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "build:doc": "apidoc -i documentations/routes -o documentations/doc",
+    "setup:env": "@type .env.example > .env || cp .env.example .env"
+  },
+  "apidoc": {
+    "name": "údúnkúlú API documentation",
+    "title": "údúnkúlú doc",
+    "description": "This documentation describes the endpoints, its params, request and response of this API",
+    "url": "https://udunkulu-api.herokuapp.com/api/v1"
+  },
+  "keywords": [],
+  "author": "https://github.com/ezehlivinus",
+  "license": "ISC",
+  "dependencies": {
+    "accesscontrol": "^2.2.1",
+    "bcrypt": "^5.0.0",
+    "cloudinary": "^1.23.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "datauri": "^3.0.0",
+    "dayjs": "^1.10.4",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-fileupload": "^1.2.1",
+    "joi": "^17.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "mailgen": "^2.0.14",
+    "mongoose": "^5.10.8",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.16",
+    "winston": "^3.3.3",
+    "winston-mongodb": "^5.0.5"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "grunt-apidoc": "^0.11.0",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.4"
+  }
+}
